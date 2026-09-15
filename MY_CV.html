@@ -11,7 +11,7 @@
   <!-- FontAwesome İkon Kütüphanesi -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   
-  <!-- Google Fonts: Inter -->
+  <!-- Google Fonts: Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -23,15 +23,6 @@
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
             mono: ['JetBrains Mono', 'monospace'],
-          },
-          colors: {
-            brand: {
-              cyan: '#06b6d4',
-              accent: '#38bdf8',
-              surface: '#0f172a',
-              card: '#1e293b',
-              border: '#334155'
-            }
           }
         }
       }
@@ -56,8 +47,15 @@
         <a href="#projeler" class="hover:text-cyan-400 transition">Projeler</a>
         <a href="#yetenekler" class="hover:text-cyan-400 transition">Yetenekler</a>
         <a href="#deneyim" class="hover:text-cyan-400 transition">Eğitim & Zirveler</a>
-        <a href="#iletisim" class="px-4 py-2 text-xs font-semibold rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 hover:bg-cyan-500 hover:text-slate-950 transition">
-          İletişime Geç
+        
+        <!-- Navbar CV Butonu -->
+        <a href="Mehmet_Kemal_Akyol_CV.pdf" download="Mehmet_Kemal_Akyol_CV.pdf" class="px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-slate-800 hover:bg-slate-700 text-cyan-400 border border-slate-700 hover:border-cyan-500/50 transition flex items-center gap-2">
+          <i class="fa-solid fa-file-arrow-down"></i>
+          <span>CV İndir</span>
+        </a>
+
+        <a href="#iletisim" class="px-4 py-1.5 text-xs font-semibold rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 hover:bg-cyan-500 hover:text-slate-950 transition">
+          İletişim
         </a>
       </div>
 
@@ -73,7 +71,10 @@
       <a href="#projeler" class="block text-slate-300 hover:text-cyan-400">Projeler</a>
       <a href="#yetenekler" class="block text-slate-300 hover:text-cyan-400">Yetenekler</a>
       <a href="#deneyim" class="block text-slate-300 hover:text-cyan-400">Eğitim & Zirveler</a>
-      <a href="#iletisim" class="block text-cyan-400 font-semibold pt-2">İletişime Geç</a>
+      <a href="Mehmet_Kemal_Akyol_CV.pdf" download="Mehmet_Kemal_Akyol_CV.pdf" class="inline-flex items-center gap-2 text-cyan-400 font-semibold py-1">
+        <i class="fa-solid fa-file-arrow-down"></i> CV İndir (PDF)
+      </a>
+      <a href="#iletisim" class="block text-slate-300 hover:text-cyan-400 pt-2 border-t border-slate-800">İletişim</a>
     </div>
   </nav>
 
@@ -93,15 +94,25 @@
         Gömülü sistemler (ESP32 / Arduino), uç birimlerde derin öğrenme modelleri (TensorFlow Lite) ve veri analitiği üzerine pratik odaklı mühendislik çözümleri tasarlıyorum.
       </p>
 
-      <div class="flex flex-wrap items-center gap-4">
-        <a href="#projeler" class="px-6 py-3 rounded-lg bg-cyan-500 text-slate-950 font-semibold hover:bg-cyan-400 transition shadow-lg shadow-cyan-500/20 flex items-center gap-2">
+      <!-- Buton Grubu: Projeler + CV İndir + Sosyal Medya -->
+      <div class="flex flex-wrap items-center gap-3.5">
+        <a href="#projeler" class="px-6 py-3 rounded-lg bg-cyan-500 text-slate-950 font-semibold hover:bg-cyan-400 transition shadow-lg shadow-cyan-500/20 flex items-center gap-2 text-sm">
           <span>Projeleri Gör</span>
           <i class="fa-solid fa-arrow-right text-xs"></i>
         </a>
-        <a href="https://github.com/mkemal8763" target="_blank" class="px-5 py-3 rounded-lg border border-slate-700 bg-slate-900/60 hover:border-cyan-500/40 text-slate-300 font-medium transition flex items-center gap-2">
+        
+        <!-- Öne Çıkan PDF İndirme Butonu -->
+        <a href="Mehmet_Kemal_Akyol_CV.pdf" download="Mehmet_Kemal_Akyol_CV.pdf" class="px-5 py-3 rounded-lg bg-slate-900 border border-cyan-500/40 hover:border-cyan-400 hover:bg-slate-850 text-cyan-300 font-medium transition flex items-center gap-2 text-sm group">
+          <i class="fa-solid fa-file-pdf text-red-400 group-hover:scale-110 transition-transform"></i>
+          <span>Özgeçmişi İndir (PDF)</span>
+        </a>
+
+        <a href="https://github.com/mkemal8763" target="_blank" class="px-4 py-3 rounded-lg border border-slate-800 bg-slate-900/60 hover:border-slate-600 text-slate-300 text-sm font-medium transition flex items-center gap-2">
           <i class="fa-brands fa-github text-base"></i> GitHub
         </a>
-        <a href="https://www.linkedin.com/in/mkakyol1/" target="_blank" class="px-5 py-3 rounded-lg border border-slate-700 bg-slate-900/60 hover:border-cyan-500/40 text-slate-300 font-medium transition flex items-center gap-2">
+        
+        <!-- Güncellenen LinkedIn Butonu -->
+        <a href="https://www.linkedin.com/in/mkakyol1" target="_blank" class="px-4 py-3 rounded-lg border border-slate-800 bg-slate-900/60 hover:border-slate-600 text-slate-300 text-sm font-medium transition flex items-center gap-2">
           <i class="fa-brands fa-linkedin text-base"></i> LinkedIn
         </a>
       </div>
@@ -168,7 +179,7 @@
             Daraba (Kepenk) Otomasyon Sistemi
           </h3>
           <p class="text-slate-400 text-sm leading-relaxed mb-6">
-            ESP32 mikrodenetleyici kullanılarak geliştirilen sistem; röle modülleri, Bluetooth Low Energy (BLE) ve Wi-Fi üzerinden MIT App Inventor ile tasarlanan mobil arayüz ile kepenklerin güvenli yönetimini sağlar.
+            ESP32 mikrodenetleyici altyapısıyla röle kontrolü, Bluetooth Low Energy (BLE) ve Wi-Fi üzerinden MIT App Inventor ile tasarlanan mobil arayüz ile uzaktan ve güvenli kepenk yönetimi.
           </p>
         </div>
         <div class="flex flex-wrap gap-2 font-mono text-xs text-slate-300">
@@ -190,7 +201,7 @@
             Mobil Cinsiyet Sınıflandırma Uygulaması
           </h3>
           <p class="text-slate-400 text-sm leading-relaxed mb-6">
-            CNN (Evrişimli Sinir Ağları) mimarisiyle eğitilen modelin TensorFlow Lite formatına dönüştürülerek optimize edilmesi ve Kivy tabanlı mobil uygulamada çevrimdışı/gerçek zamanlı çalıştırılması.
+            CNN (Evrişimli Sinir Ağları) ile eğitilen sınıflandırıcının TensorFlow Lite formatına çevrilerek mobil donanım kaynaklarına optimize edilmesi ve Kivy üzerinde gerçek zamanlı çalıştırılması.
           </p>
         </div>
         <div class="flex flex-wrap gap-2 font-mono text-xs text-slate-300">
@@ -212,7 +223,7 @@
             Rüzgar Türbini Veri Toplama & Analiz
           </h3>
           <p class="text-slate-400 text-sm leading-relaxed mb-6">
-            DC motor tabanlı mini rüzgar türbininden Arduino ile analog voltaj verilerinin periyodik okunması, Python seri port arayüzü ile kaydedilmesi ve Jamovi üzerinde frekans dağılımlarının istatistiksel modellenmesi.
+            DC motor kaynaklı mini türbinden periyodik voltaj okumalarının Arduino ile seri porta iletilmesi, Python ile işlenmesi ve Jamovi ile frekans/dağılım analizi.
           </p>
         </div>
         <div class="flex flex-wrap gap-2 font-mono text-xs text-slate-300">
@@ -234,7 +245,7 @@
             Anomali Tespiti & Kapalı Alan Konumlandırma
           </h3>
           <p class="text-slate-400 text-sm leading-relaxed mb-6">
-            UCI veri setinde Isolation Forest ile güç tüketimi anomalilerinin bulunması ve UJIIndoorLoc WiFi RSSI sinyal yoğunlukları üzerinden Random Forest algoritması ile iç mekân konum kestirimi.
+            UCI güç tüketimi verilerinde Isolation Forest ile anomali tespiti ve WiFi RSSI değerlerinden Random Forest ile iç mekân koordinat kestirimi.
           </p>
         </div>
         <div class="flex flex-wrap gap-2 font-mono text-xs text-slate-300">
@@ -313,7 +324,7 @@
         </div>
       </div>
 
-      <!-- Zirveler & Sertifikalar -->
+      <!-- Zirveler & Etkinlikler -->
       <div>
         <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
           <i class="fa-solid fa-award text-cyan-400"></i> Etkinlik & Zirveler
@@ -349,7 +360,11 @@
         <a href="mailto:mkemal.akyol7@gmail.com" class="px-5 py-2.5 rounded-lg bg-cyan-500 text-slate-950 font-semibold hover:bg-cyan-400 transition flex items-center gap-2 text-sm">
           <i class="fa-solid fa-envelope"></i> mkemal.akyol7@gmail.com
         </a>
-        <a href="https://www.linkedin.com/in/mkakyol1/" target="_blank" class="px-5 py-2.5 rounded-lg border border-slate-700 hover:border-cyan-500/40 text-slate-300 font-medium transition flex items-center gap-2 text-sm">
+        <a href="Mehmet_Kemal_Akyol_CV.pdf" download="Mehmet_Kemal_Akyol_CV.pdf" class="px-5 py-2.5 rounded-lg border border-slate-700 hover:border-cyan-400 text-cyan-300 font-medium transition flex items-center gap-2 text-sm">
+          <i class="fa-solid fa-file-pdf text-red-400"></i> CV İndir
+        </a>
+        <!-- Güncellenen LinkedIn Butonu -->
+        <a href="https://www.linkedin.com/in/mkakyol1" target="_blank" class="px-5 py-2.5 rounded-lg border border-slate-700 hover:border-cyan-500/40 text-slate-300 font-medium transition flex items-center gap-2 text-sm">
           <i class="fa-brands fa-linkedin"></i> LinkedIn
         </a>
         <a href="https://github.com/mkemal8763" target="_blank" class="px-5 py-2.5 rounded-lg border border-slate-700 hover:border-cyan-500/40 text-slate-300 font-medium transition flex items-center gap-2 text-sm">
@@ -358,7 +373,7 @@
       </div>
 
       <p class="text-slate-600 text-xs font-mono">
-        © 2026 Mehmet Kemal Akyol. Tasarım Tailwind CSS ile derlenmiştir.
+        © 2026 Mehmet Kemal Akyol.
       </p>
     </div>
   </footer>
@@ -372,7 +387,6 @@
       menu.classList.toggle('hidden');
     });
 
-    // Mobil menüdeki linke tıklandığında menüyü kapat
     document.querySelectorAll('#mobileMenu a').forEach(link => {
       link.addEventListener('click', () => {
         menu.classList.add('hidden');
