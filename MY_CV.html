@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mehmet Kemal Akyol | Elektrik-Elektronik Mühendisi & IoT / AI Geliştirici</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome İkon Kütüphanesi -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              cyan: '#06b6d4',
+              accent: '#38bdf8',
+              surface: '#0f172a',
+              card: '#1e293b',
+              border: '#334155'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#090d16] text-slate-200 font-sans selection:bg-cyan-500 selection:text-black antialiased relative">
+
+  <!-- Arka Plan Işık Efekti (Glow) -->
+  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-cyan-500/10 blur-[140px] pointer-events-none -z-10 rounded-full"></div>
+
+  <!-- Üst Menü (Navbar) -->
+  <nav class="sticky top-0 z-50 bg-[#090d16]/80 backdrop-blur-md border-b border-slate-800/80">
+    <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+      <a href="#" class="font-mono font-bold text-lg tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-sky-300">
+        &lt;MKA /&gt;
+      </a>
+      
+      <!-- Masaüstü Navigasyon -->
+      <div class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-400">
+        <a href="#hakkimda" class="hover:text-cyan-400 transition">Hakkımda</a>
+        <a href="#projeler" class="hover:text-cyan-400 transition">Projeler</a>
+        <a href="#yetenekler" class="hover:text-cyan-400 transition">Yetenekler</a>
+        <a href="#deneyim" class="hover:text-cyan-400 transition">Eğitim & Zirveler</a>
+        <a href="#iletisim" class="px-4 py-2 text-xs font-semibold rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 hover:bg-cyan-500 hover:text-slate-950 transition">
+          İletişime Geç
+        </a>
+      </div>
+
+      <!-- Mobil Menü Butonu -->
+      <button id="mobileMenuBtn" class="md:hidden text-slate-400 hover:text-white p-2">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobil Açılır Menü -->
+    <div id="mobileMenu" class="hidden md:hidden border-b border-slate-800 bg-[#0c121e] px-6 py-4 space-y-3 text-sm">
+      <a href="#hakkimda" class="block text-slate-300 hover:text-cyan-400">Hakkımda</a>
+      <a href="#projeler" class="block text-slate-300 hover:text-cyan-400">Projeler</a>
+      <a href="#yetenekler" class="block text-slate-300 hover:text-cyan-400">Yetenekler</a>
+      <a href="#deneyim" class="block text-slate-300 hover:text-cyan-400">Eğitim & Zirveler</a>
+      <a href="#iletisim" class="block text-cyan-400 font-semibold pt-2">İletişime Geç</a>
+    </div>
+  </nav>
+
+  <!-- Hero (Giriş) Bölümü -->
+  <section class="max-w-6xl mx-auto px-5 pt-20 pb-16 md:pt-28 md:pb-24">
+    <div class="max-w-3xl">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono mb-6">
+        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+        Elektrik-Elektronik Mühendisliği & Donanım-Yazılım Entegrasyonu
+      </div>
+      
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-tight mb-6">
+        Donanımı akıllı algoritmalar ve <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-sky-400">yapay zekâ</span> ile birleştiriyorum.
+      </h1>
+      
+      <p class="text-slate-400 text-base sm:text-lg leading-relaxed mb-8">
+        Gömülü sistemler (ESP32 / Arduino), uç birimlerde derin öğrenme modelleri (TensorFlow Lite) ve veri analitiği üzerine pratik odaklı mühendislik çözümleri tasarlıyorum.
+      </p>
+
+      <div class="flex flex-wrap items-center gap-4">
+        <a href="#projeler" class="px-6 py-3 rounded-lg bg-cyan-500 text-slate-950 font-semibold hover:bg-cyan-400 transition shadow-lg shadow-cyan-500/20 flex items-center gap-2">
+          <span>Projeleri Gör</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+        <a href="https://github.com/mkemal8763" target="_blank" class="px-5 py-3 rounded-lg border border-slate-700 bg-slate-900/60 hover:border-cyan-500/40 text-slate-300 font-medium transition flex items-center gap-2">
+          <i class="fa-brands fa-github text-base"></i> GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/mkakyol1/" target="_blank" class="px-5 py-3 rounded-lg border border-slate-700 bg-slate-900/60 hover:border-cyan-500/40 text-slate-300 font-medium transition flex items-center gap-2">
+          <i class="fa-brands fa-linkedin text-base"></i> LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hakkımda Mini Kartları -->
+  <section id="hakkimda" class="max-w-6xl mx-auto px-5 py-12 border-t border-slate-900">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800/80 hover:border-slate-700 transition">
+        <div class="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 mb-4">
+          <i class="fa-solid fa-microchip text-lg"></i>
+        </div>
+        <h3 class="text-white font-semibold text-lg mb-2">Gömülü & IoT Sistemler</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          ESP32, röle ve sensör mimarileri ile Bluetooth Low Energy (BLE) ve Wi-Fi üzerinden saha otomasyon çözümleri.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800/80 hover:border-slate-700 transition">
+        <div class="w-10 h-10 rounded-lg bg-sky-500/10 flex items-center justify-center text-sky-400 mb-4">
+          <i class="fa-solid fa-brain text-lg"></i>
+        </div>
+        <h3 class="text-white font-semibold text-lg mb-2">Edge AI & Görüntü İşleme</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          CNN mimarileri ile geliştirilen modelleri mobil ve uç cihazlar için TensorFlow Lite formatına dönüştürüp optimize etme.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800/80 hover:border-slate-700 transition">
+        <div class="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400 mb-4">
+          <i class="fa-solid fa-chart-line text-lg"></i>
+        </div>
+        <h3 class="text-white font-semibold text-lg mb-2">Veri Analitiği & ML</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Sensör verilerinin Python ve Jamovi ile istatistiksel modellenmesi; Random Forest ve Isolation Forest algoritmaları.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projeler Bölümü -->
+  <section id="projeler" class="max-w-6xl mx-auto px-5 py-16">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+      <div>
+        <p class="text-cyan-400 font-mono text-xs uppercase tracking-widest mb-1">Mühendislik Portföyü</p>
+        <h2 class="text-3xl font-bold text-white tracking-tight">Öne Çıkan Projeler</h2>
+      </div>
+      <p class="text-slate-400 text-sm max-w-md">
+        Teorik bilgileri gerçek dünya donanım ve yazılım uygulamalarına dönüştüren teknik vaka çalışmaları.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- Proje 1 -->
+      <div class="group relative rounded-2xl bg-[#0e1626] border border-slate-800 p-6 hover:border-cyan-500/40 transition duration-300 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="px-2.5 py-1 rounded text-xs font-mono bg-cyan-950/70 border border-cyan-800/40 text-cyan-300">IoT & Otomasyon</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-slate-600 group-hover:text-cyan-400 transition text-sm"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition">
+            Daraba (Kepenk) Otomasyon Sistemi
+          </h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            ESP32 mikrodenetleyici kullanılarak geliştirilen sistem; röle modülleri, Bluetooth Low Energy (BLE) ve Wi-Fi üzerinden MIT App Inventor ile tasarlanan mobil arayüz ile kepenklerin güvenli yönetimini sağlar.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2 font-mono text-xs text-slate-300">
+          <span class="bg-slate-800/80 px-2.5 py-1 rounded">ESP32</span>
+          <span class="bg-slate-800/80 px-2.5 py-1 rounded">C++</span>
+          <span class="bg-slate-800/80 px-2.5 py-1 rounded">BLE</span>
+          <span class="bg-slate-800/80 px-2.5 py-1 rounded">MIT App Inventor</span>
+        </div>
+      </div>
+
+      <!-- Proje 2 -->
+      <div class="group relative rounded-2xl bg-[#0e1626] border border-slate-800 p-6 hover:border-cyan-500/40 transition duration-300 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="px-2.5 py-1 rounded text-xs font-mono bg-sky-950/70 border border-sky-800/40 text-sky-300">Derin Öğrenme / Edge AI</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-slate-600 group-hover:text-sky-400 transition text-sm"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-sky-300 transition">
+            Mobil Cinsiyet Sınıflandırma Uygulaması
+          </h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            CNN (Evrişimli Sinir Ağları) mimarisiyle eğitilen modelin TensorFlow Lite formatına dönüştürülerek optimize edilmesi ve Kivy tabanlı mobil uygulamada çevrimdışı/gerçek zamanlı çalıştırılması.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2 font-mono text-xs text-slate-300">
+          <span class="bg-slate-800/80 px-2.5 py-1 rounded">Python</span>
+          <span class="bg-slate-800/80 px-2.5 py-1 rounded">CNN</span>
+          <span class="bg-slate-800/80 px-2.5 py-1 rounded">TensorFlow Lite</span>
+          <span class="bg-slate-800/80 px-2.5 py-1 rounded">Kivy</span>
+        </div>
+      </div>
+
+      <!-- Proje 3 -->
+      <div class="group relative rounded-2xl bg-[#0e1626] border border-slate-800 p-6 hover:border-cyan-500/40 transition duration-300 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="px-2.5 py-1 rounded text-xs font-mono bg-emerald-950/70 border border-emerald-800/40 text-emerald-300">Veri & Ölçüm</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-slate-600 group-hover:text-emerald-400 transition text-sm"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-300 transition">
+            Rüzgar Türbini Veri Toplama & Analiz
+          </h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            DC motor tabanlı mini rüzgar türbininden Arduino ile analog voltaj verilerinin periyodik okunması, Python seri port arayüzü ile kaydedilmesi ve Jamovi üzerinde frekans dağılımlarının istatistiksel modellenmesi.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2 font-mono text-xs text-slate-300">
+          <span class="bg-slate-800/80 px-2.5 py-1 rounded">Arduino</span>
+          <span class="bg-slate-800/80 px-2.5 py-1 rounded">Python</span>
+          <span class="bg-slate-800/80 px-2.5 py-1 rounded">Jamovi</span>
+          <span class="bg-slate-800/80 px-2.5 py-1 rounded">Veri Analitiği</span>
+        </div>
+      </div>
+
+      <!-- Proje 4 -->
+      <div class="group relative rounded-2xl bg-[#0e1626] border border-slate-800 p-6 hover:border-cyan-500/40 transition duration-300 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="px-2.5 py-1 rounded text-xs font-mono bg-purple-950/70 border border-purple-800/40 text-purple-300">Makine Öğrenmesi</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-slate-600 group-hover:text-purple-400 transition text-sm"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition">
+            Anomali Tespiti & Kapalı Alan Konumlandırma
+          </h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            UCI veri setinde Isolation Forest ile güç tüketimi anomalilerinin bulunması ve UJIIndoorLoc WiFi RSSI sinyal yoğunlukları üzerinden Random Forest algoritması ile iç mekân konum kestirimi.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2 font-mono text-xs text-slate-300">
+          <span class="bg-slate-800/80 px-2.5 py-1 rounded">Scikit-learn</span>
+          <span class="bg-slate-800/80 px-2.5 py-1 rounded">Random Forest</span>
+          <span class="bg-slate-800/80 px-2.5 py-1 rounded">Isolation Forest</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Teknik Yetenekler Bölümü -->
+  <section id="yetenekler" class="max-w-6xl mx-auto px-5 py-16 border-t border-slate-900">
+    <div class="mb-10">
+      <p class="text-cyan-400 font-mono text-xs uppercase tracking-widest mb-1">Yetkinlikler</p>
+      <h2 class="text-3xl font-bold text-white tracking-tight">Teknik Araçlar ve Teknolojiler</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <div class="p-6 rounded-2xl bg-slate-900/30 border border-slate-800">
+        <h3 class="text-base font-semibold text-white mb-4 flex items-center gap-2">
+          <span class="text-cyan-400">&bull;</span> Donanım & Gömülü Sistemler
+        </h3>
+        <div class="space-y-2 text-sm text-slate-300 font-mono">
+          <div class="bg-slate-800/50 p-2.5 rounded-lg border border-slate-800">ESP32 & Arduino</div>
+          <div class="bg-slate-800/50 p-2.5 rounded-lg border border-slate-800">C / C++ Temelleri</div>
+          <div class="bg-slate-800/50 p-2.5 rounded-lg border border-slate-800">BLE & Wi-Fi Protokolleri</div>
+          <div class="bg-slate-800/50 p-2.5 rounded-lg border border-slate-800">Sensör & Röle Arayüzleri</div>
+        </div>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-slate-900/30 border border-slate-800">
+        <h3 class="text-base font-semibold text-white mb-4 flex items-center gap-2">
+          <span class="text-cyan-400">&bull;</span> Yazılım & Yapay Zekâ
+        </h3>
+        <div class="space-y-2 text-sm text-slate-300 font-mono">
+          <div class="bg-slate-800/50 p-2.5 rounded-lg border border-slate-800">Python (NumPy, Pandas)</div>
+          <div class="bg-slate-800/50 p-2.5 rounded-lg border border-slate-800">TensorFlow, Keras, TFLite</div>
+          <div class="bg-slate-800/50 p-2.5 rounded-lg border border-slate-800">Scikit-learn Modelleri</div>
+          <div class="bg-slate-800/50 p-2.5 rounded-lg border border-slate-800">Jamovi İstatistiksel Analiz</div>
+        </div>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-slate-900/30 border border-slate-800">
+        <h3 class="text-base font-semibold text-white mb-4 flex items-center gap-2">
+          <span class="text-cyan-400">&bull;</span> Mobil & Geliştirme Araçları
+        </h3>
+        <div class="space-y-2 text-sm text-slate-300 font-mono">
+          <div class="bg-slate-800/50 p-2.5 rounded-lg border border-slate-800">MIT App Inventor</div>
+          <div class="bg-slate-800/50 p-2.5 rounded-lg border border-slate-800">Kivy & React Native Temelleri</div>
+          <div class="bg-slate-800/50 p-2.5 rounded-lg border border-slate-800">Git & GitHub</div>
+          <div class="bg-slate-800/50 p-2.5 rounded-lg border border-slate-800">VS Code & Linux Ortamları</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Eğitim & Zirveler -->
+  <section id="deneyim" class="max-w-6xl mx-auto px-5 py-16 border-t border-slate-900">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      
+      <!-- Eğitim -->
+      <div>
+        <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+          <i class="fa-solid fa-graduation-cap text-cyan-400"></i> Eğitim
+        </h3>
+        <div class="border-l-2 border-slate-800 pl-4 space-y-6">
+          <div>
+            <span class="text-xs font-mono text-cyan-400">Devam Ediyor</span>
+            <h4 class="text-base font-semibold text-white">Elektrik-Elektronik Mühendisliği</h4>
+            <p class="text-sm text-slate-400">Kütahya Dumlupınar Üniversitesi</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Zirveler & Sertifikalar -->
+      <div>
+        <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+          <i class="fa-solid fa-award text-cyan-400"></i> Etkinlik & Zirveler
+        </h3>
+        <div class="space-y-3">
+          <div class="p-3.5 rounded-xl bg-slate-900/40 border border-slate-800 flex justify-between items-center text-sm">
+            <span class="font-medium text-slate-200">İstanbul Bilişim Zirvesi</span>
+            <span class="text-xs font-mono text-slate-500">Dijital Dönüşüm</span>
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-900/40 border border-slate-800 flex justify-between items-center text-sm">
+            <span class="font-medium text-slate-200">DevFest Bursa</span>
+            <span class="text-xs font-mono text-slate-500">Google Tech</span>
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-900/40 border border-slate-800 flex justify-between items-center text-sm">
+            <span class="font-medium text-slate-200">Halkbank 2. Gençİz Zirvesi</span>
+            <span class="text-xs font-mono text-slate-500">İnsan 5.0</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- İletişim / Footer -->
+  <footer id="iletisim" class="border-t border-slate-800/80 bg-[#060a11] py-16">
+    <div class="max-w-6xl mx-auto px-5 text-center">
+      <h2 class="text-2xl font-bold text-white mb-3">Yeni Fikirler & Projeler İçin İletişime Geçin</h2>
+      <p class="text-slate-400 text-sm max-w-md mx-auto mb-8">
+        Gömülü sistemler, IoT otomasyon veya yapay zekâ projelerinde iş birliği için bana doğrudan ulaşabilirsiniz.
+      </p>
+
+      <div class="flex flex-wrap justify-center items-center gap-4 mb-12">
+        <a href="mailto:mkemal.akyol7@gmail.com" class="px-5 py-2.5 rounded-lg bg-cyan-500 text-slate-950 font-semibold hover:bg-cyan-400 transition flex items-center gap-2 text-sm">
+          <i class="fa-solid fa-envelope"></i> mkemal.akyol7@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/mkakyol1/" target="_blank" class="px-5 py-2.5 rounded-lg border border-slate-700 hover:border-cyan-500/40 text-slate-300 font-medium transition flex items-center gap-2 text-sm">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/mkemal8763" target="_blank" class="px-5 py-2.5 rounded-lg border border-slate-700 hover:border-cyan-500/40 text-slate-300 font-medium transition flex items-center gap-2 text-sm">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+      </div>
+
+      <p class="text-slate-600 text-xs font-mono">
+        © 2026 Mehmet Kemal Akyol. Tasarım Tailwind CSS ile derlenmiştir.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Mobil Menü Toggle Betiği -->
+  <script>
+    const btn = document.getElementById('mobileMenuBtn');
+    const menu = document.getElementById('mobileMenu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    // Mobil menüdeki linke tıklandığında menüyü kapat
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
